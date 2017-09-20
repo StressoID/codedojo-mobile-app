@@ -1,0 +1,13 @@
+<ion-menu [content]="mycontent">
+  <ion-content>
+    <ion-list>
+      <ion-list>
+        <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
+          {{ item }}
+        </button>
+      </ion-list>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-nav #mycontent [root]="rootPage"></ion-nav>
