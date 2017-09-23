@@ -2,8 +2,8 @@
   <ion-content>
     <ion-list>
       <ion-list>
-        <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
-          {{ item }}
+        <button menuClose ion-item *ngFor="let item of items" (click)="openPage(item)">
+          {{ item.title }}
         </button>
       </ion-list>
     </ion-list>
