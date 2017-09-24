@@ -9,6 +9,36 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-Courses will be here
+<ion-content padding class="content">
+  <ion-card *ngFor="let course of courses">
+
+    <ion-item>
+      <h2>{{course.title}}</h2>
+      <p *ngIf="course.duration !== '0 м.'">{{course.duration}}</p>
+    </ion-item>
+
+    <ion-card-content [innerHtml]="course.description"></ion-card-content>
+
+    <ion-row>
+      <ion-col right text-center>
+        <button ion-button icon-left clear small>
+          <ion-icon name="cube"></ion-icon>
+          <div>{{course.level}}</div>
+        </button>
+      </ion-col>
+      <ion-col>
+        <button *ngIf="course.capacity" ion-button icon-left clear small>
+          <ion-icon name="people"></ion-icon>
+          <div>{{course.capacity}}</div>
+        </button>
+      </ion-col>
+      <ion-col center text-center>
+        <button ion-button outline item-end icon-left small>
+          <ion-icon name="cart"></ion-icon>
+          Купить
+        </button>
+      </ion-col>
+    </ion-row>
+
+  </ion-card>
 </ion-content>

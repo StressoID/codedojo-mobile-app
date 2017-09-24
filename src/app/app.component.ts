@@ -4,7 +4,6 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
-import { VideosPage } from '../pages/videos/videos';
 import { CoursesPage } from '../pages/courses/courses';
 @Component({
   templateUrl: 'app.component.html'
@@ -16,15 +15,18 @@ export class MyApp {
   items = [
     {
       page: HomePage,
-      title: 'YouTube'
-    },
-    {
-      page: VideosPage,
-      title: 'Видео-курсы'
+      title: 'YouTube',
+      param: false
     },
     {
       page: CoursesPage,
-      title: 'Онлайн-курсы'
+      title: 'Видео-курсы',
+      param: false
+    },
+    {
+      page: CoursesPage,
+      title: 'Онлайн-курсы',
+      param: 'OnlineCourse'
     },
   ];
 
@@ -38,7 +40,7 @@ export class MyApp {
   }
 
   openPage(item) {
-    this.nav.setRoot(item.page);
+    this.nav.setRoot(item.page, item.param);
   }
 
 }
