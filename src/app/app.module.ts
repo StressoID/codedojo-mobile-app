@@ -1,3 +1,4 @@
+import { SocialsPage } from './../pages/socials/socials';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -13,7 +14,8 @@ import { HttpModule } from '@angular/http';
   declarations: [
     MyApp,
     HomePage,
-    CoursesPage
+    CoursesPage,
+    SocialsPage
   ],
   imports: [
     BrowserModule,
@@ -24,7 +26,8 @@ import { HttpModule } from '@angular/http';
   entryComponents: [
     MyApp,
     HomePage,
-    CoursesPage
+    CoursesPage,
+    SocialsPage
   ],
   providers: [
     StatusBar,

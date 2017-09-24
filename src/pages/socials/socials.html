@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon ios="ios-menu"></ion-icon>
+    </button>
+    <ion-title>
+      CodeDojo
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list>
+      <a *ngFor="let social of socials" [href]="social.link">
+        <ion-item>
+            {{social.title}}
+        </ion-item>
+      </a>
+    </ion-list>
+</ion-content>

@@ -1,3 +1,4 @@
+import { SocialsPage } from './../pages/socials/socials';
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
@@ -27,6 +28,11 @@ export class MyApp {
       page: CoursesPage,
       title: 'Онлайн-курсы',
       param: 'OnlineCourse'
+    },
+    {
+      page: SocialsPage,
+      title: 'Соц. сети',
+      param: false
     },
   ];
 
